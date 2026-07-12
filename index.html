@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB PRO Home Solutions LLC</title>
+
+<style>
+:root {
+    --blue: #457b9d;
+    --dark: #1d3557;
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #2b2b2b;
+    --muted: #5f6b7a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--blue);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(29, 53, 87, 0.96);
+    backdrop-filter: blur(8px);
+    padding: 14px 12px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 0;
+}
+
+.hero {
+    background: white;
+}
+
+.top-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-image.first img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-copy {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 26px 24px 10px;
+    text-align: center;
+}
+
+.hero-copy h1 {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 4vw, 48px);
+    color: var(--dark);
+    line-height: 1.15;
+}
+
+.hero-copy p {
+    margin: 0 auto 18px;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(69, 123, 157, 0.22);
+}
+
+.btn.secondary {
+    background: white;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    box-shadow: none;
+}
+
+.top-image.second {
+    max-width: 1100px;
+    margin: 18px auto 30px;
+    padding: 0 24px;
+}
+
+.top-image.second img {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: white;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+section {
+    background: white;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 34px 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    color: var(--dark);
+    margin-top: 0;
+    font-size: clamp(24px, 2.8vw, 34px);
+}
+
+section > p {
+    color: var(--muted);
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #e7edf4;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin: 8px 0 8px;
+    color: var(--dark);
+}
+
+.project-set {
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: 18px;
+    border: 1px solid #e7edf4;
+}
+
+.before-after {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.project-item {
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    border: 1px solid #edf1f5;
+}
+
+.project-item img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    background: #f8f8f8;
+    border-radius: 10px;
+    display: block;
+}
+
+.after-wide {
+    margin-top: 18px;
+}
+
+.after-wide img {
+    width: 100%;
+    height: 520px;
+    object-fit: contain;
+    background: #f8f8f8;
+    border-radius: 10px;
+    display: block;
+}
+
+.project-item p,
+.after-wide p {
+    margin: 10px 0 0;
+}
+
+.contact-link {
+    font-weight: bold;
+}
+
+button {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover,
+.btn:hover {
+    filter: brightness(0.92);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 10px;
+    }
+
+    .top-image.first img {
+        height: 220px;
+    }
+
+    .hero-copy {
+        padding: 22px 18px 8px;
+    }
+
+    section {
+        margin: 18px 12px;
+        padding: 24px 18px;
+    }
+
+    .top-image.second {
+        padding: 0 12px;
+    }
+
+    .project-item img {
+        height: 320px;
+    }
+
+    .after-wide img {
+        height: 360px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="top-image first">
+        <img src="top pic 1.jpg" alt="AB PRO Home Solutions top image 1">
+    </div>
+
+    <div class="hero-copy">
+        <h1>AB PRO Home Solutions LLC</h1>
+        <p>Reliable home repairs, improvements, and maintenance in St. Augustine, Florida.</p>
+        <div class="cta-row">
+            <a class="btn" href="#contact">Request Service</a>
+            <a class="btn secondary" href="#projects">See Projects</a>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="top-image second">
+    <img src="top pic.jpg" alt="AB PRO Home Solutions top image 2">
+</div>
+
+<section id="about">
+    <h2>About AB PRO Home Solutions LLC</h2>
+    <p>
+        AB PRO Home Solutions LLC is a professional home improvement company based in St. Augustine, Florida. We provide dependable repair, maintenance, and improvement services for homeowners looking to protect, improve, and add value to their properties.
+    </p>
+    <p>
+        Our goal is to provide quality workmanship, honest communication, and reliable solutions for every project. From small repairs to larger home improvement projects, we focus on attention to detail and customer satisfaction.
+    </p>
+    <p>
+        Our services include interior and exterior repairs, drywall work, painting, caulking, home maintenance, remodeling improvements, and general property solutions. We take pride in helping homeowners keep their properties looking their best.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Home repairs">
+            <h3>Home Repairs</h3>
+            <p>General repairs, maintenance, and improvements to keep your home safe and looking great.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Interior improvements">
+            <h3>Interior Improvements</h3>
+            <p>Professional upgrades including remodeling, finishing work, and home improvement projects.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Property maintenance">
+            <h3>Property Maintenance</h3>
+            <p>Reliable solutions for homeowners needing ongoing maintenance and repairs.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Before and After Project</h2>
+    <p>These photos show the same area before and after the work was completed.</p>
+
+    <div class="project-set">
+        <div class="before-after">
+            <div class="project-item">
+                <img src="before outside.jpg" alt="Before outside photo 1">
+                <p><strong>Before</strong></p>
+            </div>
+
+            <div class="project-item">
+                <img src="before outside (2).jpg" alt="Before outside photo 2">
+                <p><strong>Before</strong></p>
+            </div>
+        </div>
+
+        <div class="after-wide">
+            <img src="after outside.jpg" alt="After outside photo">
+            <p><strong>After</strong></p>
+        </div>
+    </div>
+
+    <h2 style="margin-top:40px;">Bedroom Project</h2>
+    <p>This set shows the bedroom before and after repair work.</p>
+
+    <div class="project-set">
+        <div class="before-after">
+            <div class="project-item">
+                <img src="before bedroom.jpg" alt="Before bedroom photo">
+                <p><strong>Before</strong></p>
+            </div>
+
+            <div class="project-item">
+                <img src="after bedroom.jpg" alt="After bedroom photo">
+                <p><strong>After</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="margin-top:40px;">Living Room Project</h2>
+    <p>This set shows the living room before and after the work was completed.</p>
+
+    <div class="project-set">
+        <div class="before-after">
+            <div class="project-item">
+                <img src="before in living room.jpg" alt="Before living room photo">
+                <p><strong>Before</strong></p>
+            </div>
+
+            <div class="project-item">
+                <img src="after in living room.jpg" alt="After living room photo">
+                <p><strong>After</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+        Ready to improve your home? Contact AB PRO Home Solutions LLC today for professional repair and improvement services.
+    </p>
+    <p class="contact-link">
+        Facebook: <a href="https://www.facebook.com/profile.php?id=61586680901571" target="_blank" rel="noopener">Visit our Facebook profile</a>
+    </p>
+    <button onclick="window.open('https://www.facebook.com/profile.php?id=61586680901571', '_blank')">Request Service</button>
+</section>
+
+<footer>
+    <p>© 2026 AB PRO Home Solutions LLC | St. Augustine, Florida</p>
+</footer>
+
+</body>
+</html>
